@@ -1,0 +1,17 @@
+{% autoescape off %}
+    {% if patient.gender == "Female" %}
+    <div class="pre">Ms. {{patient}},&nbsp;</div>
+    {% else %}
+    <div class="pre">Mr. {{patient}},&nbsp;</div>
+    {% endif %}
+    <div class="pre">&nbsp;</div>
+    <p>Your report has been generated with the result. Kindly go through it by clicking the following link.</p>
+
+    <a href="http://127.0.0.1:8000/myAPI/result_pdf/{{mobile}}">Click here to view your report</a>
+
+    <div class="pre">&nbsp;</div>
+    <div class="pre">Thank you for trusting us.</div>
+    <i>-- This is a computer generated mail. Do not try to mail at this mail-id. --</i>
+    </div>
+
+{% endautoescape %}

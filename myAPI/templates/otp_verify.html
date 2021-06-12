@@ -1,0 +1,108 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from preview.colorlib.com/theme/covid/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Nov 2020 15:42:49 GMT -->
+<head>
+    <title>Covid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="A.fonts%2c%2c_icomoon%2c%2c_style.css%2bcss%2c%2c_bootstrap.min.css%2bcss%2c%2c_jquery-ui.css%2bcss%2c%2c_owl.carousel.min.css%2bcss%2c%2c_owl.theme.default.min.css%2bcss%2c%2c_owl.theme.default.min.css%2bcss%2c%2c_jq"/>-->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon-covid/font/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'css/aos.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div id="overlayer"></div>
+<div class="loader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<div class="site-wrap">
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <div class="hero-v1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mr-auto text-center text-lg-left">
+                    <span class="d-block subheading">OTP Verification</span>
+                    <h1 class="heading mb-3">Please provide your 4 digit OTP here!</h1>
+                    <p>Enter OTP sent to your number {{mobile}}</p>
+                </div>
+                <div class="col-lg-6">
+                    <figure class="illustration-2">
+                        <img src="{% static 'images/otp2.jpg' %}" alt="Image" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="col-lg-6"></div>
+            </div>
+        </div>
+    </div>
+    <!-- MAIN -->
+
+    <div class="container">
+        <div class="col-6 mx-auto">
+
+            {% if message %}
+            <br>
+            <div class="alert alert-{{class}}">
+                {{message}}
+            </div>
+            {% endif %}
+
+            <form class="mt-2" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="form-group col-12 mt-3">
+                        <input type="text" placeholder="Enter otp" class="form-control" name="otp" id="">
+                    </div>
+                </div>
+
+                <p>Don't have account <a href="{% url 'registration' %}">Register</a></p>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div> <!-- .site-wrap -->
+<script src="{% static 'js/jquery-3.3.1.min.js.pagespeed.jm.r0B4QCxeCQ.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js%2bpopper.min.js.pagespeed.jc.khCDnZgB2_.js' %}"></script><script>eval(mod_pagespeed_aFAchZtUsU);</script>
+<script>eval(mod_pagespeed_ZOlM0Hbpgf);</script>
+<script src="{% static 'js/bootstrap.min.js.pagespeed.jm.m29fZhtnNs.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js%2bjquery.countdown.min.js%2bjquery.easing.1.3.js%2baos.js.pagespeed.jc.0-5aITW-A5.js' %}"></script><script>eval(mod_pagespeed_GkjDTgElXa);</script>
+<script>eval(mod_pagespeed_EmRUzT82LI);</script>
+<script>eval(mod_pagespeed_MPWlnU3298);</script>
+<script>eval(mod_pagespeed_3UPz6kHU$m);</script>
+<script src="{% static 'js/jquery.fancybox.min.js%2bjquery.sticky.js.pagespeed.jc.CEvDOwHa87.js' %}"></script><script>eval(mod_pagespeed_L0vGjcfl4Y);</script>
+<script>eval(mod_pagespeed_mrXAoyqryH);</script>
+<script src="{% static 'js/isotope.pkgd.min.js%2bmain.js.pagespeed.jc.L7rAXnMYzo.js' %}"></script><script>eval(mod_pagespeed_IOLpstlzdC);</script>
+<script>eval(mod_pagespeed_dRNAz0sfPP);</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-23581568-13');</script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/covid/symptoms.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Nov 2020 15:42:50 GMT -->
+</html>
+
